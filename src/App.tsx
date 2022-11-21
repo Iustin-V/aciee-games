@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { StyledWrapper } from "./Style";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home";
+import { UnknownRoute } from "./components/UnknownRoute";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledWrapper>
+      <BrowserRouter>
+        {/*<div ref={topRef} />*/}
+        {/*<Navbar />*/}
+        {/*<ScrollToTop />*/}
+        <Routes>
+          <Route path={`/`} element={<Home />} />
+          {/*{navbarLinks}*/}
+
+          <Route path="*" element={<UnknownRoute />} />
+        </Routes>
+        {/*<ToTopButton topRef={topRef} isTopButton={isTopButton} />*/}
+        {/*<Footer />*/}
+      </BrowserRouter>
+    </StyledWrapper>
   );
 }
 
