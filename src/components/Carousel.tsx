@@ -3,30 +3,50 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SlideOne from "./Slide";
+import styled from "styled-components";
 
-export default class SimpleSlider extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 2000,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      centerMode: true,
-      centerPadding: "150px",
-      pauseOnHover:true,
-      autoplay:true,
-      autoplaySpeed:5000,
-    };
-    return (
-      <div style={{ textAlign: "center", maxWidth: "800px",width: "100%",margin:"0 auto",padding:"40px 0"  }}>
-        <Slider {...settings}>
-          <SlideOne />
-          <SlideOne />
-          <SlideOne />
-          <SlideOne />
-        </Slider>
-      </div>
-    );
+const StyledCarousel = styled.div`
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 0;
+  opacity: 0;
+  transform: translateY(30%);
+  @keyframes slide-in-anim {
+    20% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-}
+  animation: slide-in-anim 0.8s ease-out forwards;
+
+`;
+
+export const Carousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "150px",
+    pauseOnHover: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
+  return (
+    <StyledCarousel>
+      <Slider {...settings}>
+        <SlideOne />
+        <SlideOne />
+        <SlideOne />
+        <SlideOne />
+      </Slider>
+    </StyledCarousel>
+  );
+};

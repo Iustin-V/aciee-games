@@ -8,6 +8,7 @@ export const StyledWrapper = styled.div`
 export const PageContainer = styled.div`
   height: calc(100vh - 160px);
   background-color: #e1d8e1;
+overflow: hidden;
 `;
 
 export const MainTitle = styled.div`
