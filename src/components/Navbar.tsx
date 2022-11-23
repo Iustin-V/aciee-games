@@ -1,3 +1,9 @@
+import { MainTitle } from "../Style";
+
 export const Navbar = () => {
-  return <></>;
+  return (
+    <MainTitle>
+      <p> Games</p>
+    </MainTitle>
+  );
 };

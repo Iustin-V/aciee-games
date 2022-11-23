@@ -6,20 +6,23 @@ export const StyledWrapper = styled.div`
   background-color: #fafafa;
 `;
 export const PageContainer = styled.div`
+  height: calc(100vh - 160px);
+  background-color: #e1d8e1;
+`;
+
+export const MainTitle = styled.div`
+  font-size: 56px;
+  color: #103354;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   margin: auto;
-  max-width: 800px;
   flex-direction: column;
-`;
-
-export const MainTitle = styled.p`
-  font-size: 56px;
-  color: #103354;
+  background-color: #e1eaf3;
   font-weight: 700;
+  font-family: 'Codec',serif;
+
 `;
 export const MainPageText = styled.div`
   color: whitesmoke;

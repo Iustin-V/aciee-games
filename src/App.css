@@ -12,7 +12,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+@font-face {
+  font-family: "Codec";
+  src: url("./Fonts/codec-pro-fat-italic.ttf") ;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
