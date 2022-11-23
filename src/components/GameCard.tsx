@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 interface GameCardProps {
   title: string;
   isSinglePlayer: boolean;
@@ -7,14 +6,14 @@ interface GameCardProps {
   index: number;
 }
 const StyledGameCard = styled.div<{ image: string; index: number }>`
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 25px;
   background-image: url(${(props) => props.image});
   box-shadow: 2px 2px black;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: 200px 200px;
+  background-size: 300px 300px;
   opacity: 0;
   @keyframes slide-in-anim-right-text {
     20% {

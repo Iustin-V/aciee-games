@@ -6,9 +6,10 @@ export const StyledWrapper = styled.div`
   background-color: #fafafa;
 `;
 export const PageContainer = styled.div`
-  height: calc(100vh - 160px);
+  height: fit-content;
   background-color: #e1d8e1;
-overflow: hidden;
+  min-height:calc(100vh - 161px);
+  
 `;
 
 export const MainTitle = styled.div`

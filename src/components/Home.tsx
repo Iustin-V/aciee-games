@@ -10,7 +10,7 @@ export const Home = () => {
     <>
       <PageContainer>
         <ToggleButton
-          text="Gallery"
+          text="Gallery mode"
           toggled={isGallery}
           setToggled={setIsGallery}
         />
