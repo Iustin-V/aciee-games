@@ -14,14 +14,13 @@ export const PageContainer = styled.div`
 
 export const MainTitle = styled.div`
   font-size: 56px;
-  color: #103354;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   flex-direction: column;
-  background-color: #e1eaf3;
+  background-color: #2070bf;
   font-weight: 700;
   font-family: 'Codec',serif;
 

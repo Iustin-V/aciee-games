@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -29,14 +29,14 @@ const StyledCarousel = styled.div`
 export const Carousel = () => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "150px",
     pauseOnHover: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
   };
   return (

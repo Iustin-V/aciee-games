@@ -10,8 +10,8 @@ const StyledGameCard = styled.div<{ image: string; index: number }>`
   width: 300px;
   border-radius: 25px;
   background-image: url(${(props) => props.image});
-  box-shadow: 2px 2px black;
   overflow: hidden;
+  border:1px solid grey;
   background-repeat: no-repeat;
   background-size: 300px 300px;
   opacity: 0;
