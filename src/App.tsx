@@ -4,8 +4,9 @@ import { StyledWrapper } from "./Style";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./components/Home";
 import { UnknownRoute } from "./components/UnknownRoute";
-import {Navbar} from "./components/Navbar";
-
+import { Navbar } from "./components/Navbar";
+// import * as MathGame from "./components/Games/MathGame";
+import Game from "./components/Games/MathGame";
 function App() {
   return (
     <StyledWrapper>
@@ -15,6 +16,7 @@ function App() {
         {/*<ScrollToTop />*/}
         <Routes>
           <Route path={`/`} element={<Home />} />
+          <Route path={`/math`} element={<Game />} />
           {/*{navbarLinks}*/}
 
           <Route path="*" element={<UnknownRoute />} />
