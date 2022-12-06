@@ -6,9 +6,9 @@ import { Home } from "./components/Home";
 import { UnknownRoute } from "./components/UnknownRoute";
 import { Navbar } from "./components/Navbar";
 // import * as MathGame from "./components/Games/MathGame";
-import Game from "./components/Games/MathGame";
-import PlayGround from "./components/Games/MemoryGame";
-
+import { default as MathGame } from "./components/Games/MathGame";
+import { default as MemoryGame } from "./components/Games/MemoryGame";
+import { default as TypingGame } from "./components/Games/TypingGame";
 function App() {
   return (
     <StyledWrapper>
@@ -18,8 +18,9 @@ function App() {
         {/*<ScrollToTop />*/}
         <Routes>
           <Route path={`/`} element={<Home />} />
-          <Route path={`/math`} element={<Game />} />
-          <Route path={`/memory`} element={<PlayGround id="memoryGame" />} />
+          <Route path={`/math`} element={<MathGame />} />
+          <Route path={`/memory`} element={<MemoryGame id="memoryGame" />} />
+          <Route path={`/letters`} element={<TypingGame />} />
           {/*{navbarLinks}*/}
 
           <Route path="*" element={<UnknownRoute />} />
