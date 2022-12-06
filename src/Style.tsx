@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const StyledWrapper = styled.div`
   overflow-x: hidden;
   font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
-  background-color: #fafafa;
+  background:transparent;
 `;
 export const PageContainer = styled.div`
   height: fit-content;
-  background-color: #e1d8e1;
+  background-color: #ffffff;
   min-height:calc(100vh - 161px);
   
 `;
