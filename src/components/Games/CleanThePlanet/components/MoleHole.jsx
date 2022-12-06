@@ -30,6 +30,7 @@ function MoleHole({ molePopped, setScore }) {
         className={`hole-content ${moleState === "mole" ? "mole" : ""}`}
         src={getMoleImage(moleState)}
         alt=""
+        draggable="false"
       />
     </div>
   );
@@ -38,12 +39,10 @@ function MoleHole({ molePopped, setScore }) {
 let images=[can,bottle,apple,fish]
 const getRandomImage = () =>{
   let index=Math.floor(Math.random() * 4)
-  console.log(index)
   return images[index]
 }
 
 let getMoleImage = (state) => {
-  console.log(images)
   if (state === "escaped") {
     return cleaned;
   }

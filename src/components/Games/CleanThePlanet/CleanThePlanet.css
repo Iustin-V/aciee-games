@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
-body{
+.gamePage {
   background-image: url("./img/grass.webp");
-
+  height: fit-content;
+padding: 10px;
 }
 .title {
   -webkit-text-stroke: 1px #e4f9fa;
   text-shadow: 2px 2px #111;
   font-family: "Luckiest Guy", cursive;
   font-size: 5rem;
+  letter-spacing: 10px;
 }
 .main-p {
   margin-top: 2rem;
@@ -20,7 +22,7 @@ body{
   border: 1px solid;
   font-size: 1.5rem;
   color: #e4f9fa;
-  font-family: "Luckiest Guy",cursive;
+  font-family: "Luckiest Guy", cursive;
   transition: 0.1s ease-in;
   text-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -31,7 +33,7 @@ body{
   text-align: center;
   width: 60vw;
   max-width: 70%;
-  margin:0 auto;
+  margin: 0 auto;
   background-color: #212121;
   border: 2px solid;
   color: #e4f9fa;
@@ -47,7 +49,7 @@ body{
   font-size: 4rem;
   margin-bottom: 4rem;
   text-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  font-family:"Codec",sans-serif;
+  font-family: "Codec", sans-serif;
 }
 
 .card p {
@@ -110,7 +112,7 @@ body{
 
 .mole {
   animation: pop-up 0.1s linear;
-  height:70%;
+  height: 70%;
   object-fit: contain;
 }
 
@@ -153,7 +155,7 @@ body{
 }
 
 @media screen and (max-width: 740px) {
-  .title{
+  .title {
     font-size: 8vw;
   }
 }

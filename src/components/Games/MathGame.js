@@ -149,7 +149,7 @@ class Header extends React.PureComponent {
         <div className="container">
           <Timer endTime={endTime} onTimerEnd={onTimerEnd} />
           <div className="status">
-            <div className="status-item max">up to {max}</div>
+            <div className="status-item max">pana la {max}</div>
             <div className="status-item rate">
               {answered}/{asked}
             </div>
@@ -266,12 +266,12 @@ class Summary extends React.PureComponent {
         }`}
       >
         <div className="title">
-          <div className="big">GOOD JOB!</div>
-          Your Score is:
+          <div className="big">BRAVO!</div>
+          Scor final:
         </div>
         <Badge score={score} />
-        <div className="button" onClick={onPlayAgain}>
-          PLAY AGAIN
+        <div className="mathButton" onClick={onPlayAgain}>
+          Joaca din nou
         </div>
       </div>
     );

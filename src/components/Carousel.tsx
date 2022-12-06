@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SlideOne from "./Slide";
 import styled from "styled-components";
+import Slide from "./Slide";
 
 const StyledCarousel = styled.div`
   text-align: center;
@@ -23,7 +23,6 @@ const StyledCarousel = styled.div`
     }
   }
   animation: slide-in-anim 0.8s ease-out forwards;
-
 `;
 
 export const Carousel = () => {
@@ -42,10 +41,34 @@ export const Carousel = () => {
   return (
     <StyledCarousel>
       <Slider {...settings}>
-        <SlideOne />
-        <SlideOne />
-        <SlideOne />
-        <SlideOne />
+        <Slide
+          title="Joc Matematica"
+          description="Testeaza-ti aptitudinile de matematician in acest joc distractiv care te determina sa te misti cat poti de repede."
+          image="https://img.freepik.com/premium-vector/cartoon-math-chalkboard-background_23-2148154590.jpg?w=2000"
+          redirect='/math'
+        />
+        <Slide
+          title="Joc Memorie"
+          description="Acest joc iti va stimula abilitatea de a retine informatii pe termen scurt. Vezi cat de rapid esti sub presiune"
+          image="https://via.placeholder.com/400/3D1D73/ffffff"
+          redirect='/memory'
+
+        />
+        <Slide
+          title="Joc Scris"
+          description="Afla cate cuvinte poti scrie intr-un timp foarte scurt. Joaca si compara rezultatele cu prietenii tai. "
+          image="https://via.placeholder.com/400/3D1D73/ffffff"
+          redirect='/letters'
+
+        />
+        <Slide
+          title="Joc Curatenie"
+          description="Contribuie la curatarea planetei in acest joc distractiv."
+          image="https://via.placeholder.com/400/3D1D73/ffffff"
+          redirect='/clean'
+
+        />
+
       </Slider>
     </StyledCarousel>
   );

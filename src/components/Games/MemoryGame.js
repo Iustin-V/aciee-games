@@ -139,7 +139,7 @@ class PlayGround extends React.Component {
     if (document.getElementById("show").classList.contains("disabled")) {
       return;
     } else {
-      const cardCollection = document.getElementsByClassName("card");
+      const cardCollection = document.getElementsByClassName("memoryCard");
       const cardArr = Array.from(cardCollection);
       cardArr?.map((item, index) => {
         item?.classList?.add("matched");
@@ -154,10 +154,10 @@ class PlayGround extends React.Component {
   }
   render() {
     return (
-      <>
-        <div className="score">Score: {this.state.score}</div>
+      <div className="memoryGameContainer">
+        <div className="memoryScore">Scor: {this.state.score}</div>
         <div id="show" className="startButton" onClick={() => this.showCards()}>
-          Show Cards
+          Arata pozele
         </div>
         <div className="playground">
           <div className="cardContainer">
@@ -184,10 +184,10 @@ class PlayGround extends React.Component {
             }`}
             onClick={() => this.handleRestart()}
           >
-            Start over
+            Joaca din nou
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
@@ -204,7 +204,7 @@ class Card extends React.Component {
     return (
       <div
         className={
-          "card" +
+          "memoryCard" +
           (!this.props.close ? " opened" : "") +
           (this.props.complete ? " matched" : "")
         }

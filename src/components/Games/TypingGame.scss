@@ -5,12 +5,15 @@ $wrong: #f3b61f;
 * {
   box-sizing: border-box;
 }
-body {
+.game {
   background: $bg;
   color: $color;
   font-family: "Raleway", sans-serif;
-}
 
+  p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 a {
   color: $blue;
   display: block;
@@ -23,6 +26,7 @@ a {
   &:hover {
     color: lighten($blue, 10%);
   }
+}
 }
 
 .serif {
@@ -105,10 +109,6 @@ a {
   }
 }
 
-p {
-  font-size: 1.4rem;
-  text-align: center;
-}
 
 .button {
   background: transparent;
