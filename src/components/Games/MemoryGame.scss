@@ -1,0 +1,136 @@
+body {
+  background: #fff;
+  font-family: "Delius", cursive;
+}
+
+//#memoryGame {
+//  padding:35px;
+//  width:40%;
+//  margin: 20px auto;
+//  border-radius: 10px;
+.playground {
+  display: flex;
+  perspective: 1000px;
+  margin-bottom: -15px;
+  align-items: center;
+  justify-content: center;
+  .cardContainer {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1500px;
+    .card {
+      width: 200px;
+      user-select: none;
+      height: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+      margin-bottom: 15px;
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      div {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: 0.6s;
+        background: #f4f5f7;
+      }
+      .front {
+        font-size: 50px;
+        line-height: 120px;
+        cursor: pointer;
+        color: darken(#f4f5f7, 20%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6);
+        //background: linear-gradient(to top, #FFFFFF, #ECE9E6);
+      }
+      .back {
+        transform: rotateY(180deg);
+        line-height: 110px;
+        img {
+          vertical-align: middle;
+          width: 70%;
+        }
+      }
+      &.opened {
+        transform: rotateY(180deg);
+      }
+      &.matched {
+        transform: rotateY(180deg);
+        pointer-events: none;
+        .back {
+          box-shadow: 0 0 0 2px rgba(#000, 0.05) inset;
+          animation: selected 0.8s 0s ease 1;
+          animation-fill-mode: both;
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+.gameData {
+  height: 100px;
+}
+.score {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 50px auto 0;
+  width: fit-content;
+}
+.startButton {
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: #1abc9c;
+  color: white;
+  font-size: 38px;
+  font-weight: 700;
+  width: fit-content;
+  margin: 0 auto;
+  animation: buttonAnim 0.5s linear;
+  &:hover {
+    background-color: #80dac9;
+  }
+  &.hide {
+    display: none;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    background-color: #7b9b95;
+  }
+}
+@keyframes buttonAnim {
+  0% {
+    transform: translateY(70%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes selected {
+  0% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}

@@ -7,6 +7,8 @@ import { UnknownRoute } from "./components/UnknownRoute";
 import { Navbar } from "./components/Navbar";
 // import * as MathGame from "./components/Games/MathGame";
 import Game from "./components/Games/MathGame";
+import PlayGround from "./components/Games/MemoryGame";
+
 function App() {
   return (
     <StyledWrapper>
@@ -17,6 +19,7 @@ function App() {
         <Routes>
           <Route path={`/`} element={<Home />} />
           <Route path={`/math`} element={<Game />} />
+          <Route path={`/memory`} element={<PlayGround id="memoryGame" />} />
           {/*{navbarLinks}*/}
 
           <Route path="*" element={<UnknownRoute />} />
