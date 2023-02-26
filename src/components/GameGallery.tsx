@@ -8,7 +8,7 @@ const StyledGallery = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 35px;
-  padding: 60px;
+  padding: 100px 60px 40px;
 `;
 
 const Games = (

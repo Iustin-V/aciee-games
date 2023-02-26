@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
-  overflow-x: hidden;
   font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   background:transparent;
 `;
 export const PageContainer = styled.div`
   height: fit-content;
-  background-color: #ffffff;
+  background-color: transparent;
   position:relative;
   //min-height:calc(100vh - 161px);
   
@@ -21,7 +20,7 @@ export const MainTitle = styled.div`
   align-items: center;
   margin: auto;
   flex-direction: column;
-  background-color: #2070bf;
+  //background-color: #2070bf;
   font-weight: 700;
   font-family: 'Codec',serif;
 

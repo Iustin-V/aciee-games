@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./MathGameStyle.scss";
-import faciee from "./../images/logo-aciee.png";
-import redeclipse from "./../images/Red Eclipse -white-horizontal.png";
+import faciee from "./../Images/logo-aciee.png";
+import redeclipse from "./../Images/Red Eclipse -white-horizontal.png";
 
 const TIME = 30; // Initial game duration, in seconds
 

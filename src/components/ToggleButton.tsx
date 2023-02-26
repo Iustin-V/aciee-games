@@ -31,18 +31,20 @@ const StyledSwitch = styled.label`
   display: inline-block;
   width: 60px;
   height: 34px;
+
   input {
     opacity: 0;
     width: 0;
     height: 0;
     border-radius: 34px;
   }
+
   input:checked + span {
-    background-color: #2196f3;
+    background-color: #103354;
   }
 
   input:focus + span {
-    box-shadow: 0 0 1px #2196f3;
+    box-shadow: 0 0 1px #103354;
   }
 
   input:checked + span:before {
@@ -88,7 +90,7 @@ export const ToggleButton = (props: ToggleButtonProps) => {
 
   return (
     <ToggleButtonContainer>
-      <StyledText color={props.toggled ? "#2196f3" : "white"}>
+      <StyledText color={props.toggled ? "#103354" : "white"}>
         {props.text}
       </StyledText>
       <StyledSwitch>

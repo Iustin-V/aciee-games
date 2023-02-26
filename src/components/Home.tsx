@@ -40,6 +40,9 @@ export const Home = () => {
 
   return (
     <>
+        <div className="bg"></div>
+        <div className="bg bg2"></div>
+        <div className="bg bg3"></div>
         <Navbar />
       <PageContainer>
         <ToggleButton

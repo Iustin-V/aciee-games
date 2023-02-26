@@ -115,22 +115,23 @@ const STextWrapper = styled.div`
   color: white;
   max-width: 600px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.86);
-  
+  background: rgba(8, 15, 43, 0.82);
+
   h1, p {
     max-width: 80%;
-    
+
   }
+
   h1 {
-    margin:40px 0;
+    margin: 40px 0;
     font-family: "Russo", sans-serif;
-    font-size:50px;
+    font-size: 50px;
   }
 
   p {
-    margin:0 0 20px 0;
+    margin: 0 0 20px 0;
     font-family: "Russo", sans-serif;
-    font-size:20px;
+    font-size: 20px;
   }
 `;
 interface SlideProps {
