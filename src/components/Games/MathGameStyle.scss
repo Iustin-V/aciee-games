@@ -7,17 +7,54 @@ $color-black: #000000;
 $color-green: #2ecc71;
 $color-red: #e74c3c;
 $color-yellow: #f1c40f;
-$color-torquoise: #1abc9c;
+$color-torquoise: #2070bf;
 
 $choice-width: 80px;
 $choice-height: 50px;
 $choice-spacing: 15px;
+.game-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(141, 140, 157);
+  background: linear-gradient(
+    180deg,
+    rgba(141, 140, 157, 1) 0%,
+    rgba(110, 137, 164, 1) 100%
+  );
+}
+.footer-section {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  align-items: center;
+  gap: 30px;
+  cursor:pointer;
 
+  p {
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+  }
+  img {
+    height: 70px;
+  }
+}
 .game-container {
   justify-content: center;
   font-family: Roboto;
   background-color: $color-light-green;
   color: $color-dark-blue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 1000px;
+  height: 600px;
+  border: 15px solid $color-dark-blue;
 }
 .mathContainer {
   display: flex;
@@ -37,11 +74,11 @@ $choice-spacing: 15px;
 }
 .mathButton {
   font-size: 30px;
-  background-color: #1abc9c;
+  background-color: #2070bf;
   padding: 10px 25px;
   border-radius: 25px;
   color: white;
-  &:hover{
+  &:hover {
     background-color: #5bb6a4;
   }
 }
@@ -54,13 +91,6 @@ div {
   width: 400px;
   display: flex;
   justify-content: space-between;
-}
-
-.game-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
 }
 
 .header {
@@ -266,10 +296,10 @@ div {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 600px;
+  width: 1000px;
   background-color: $color-white;
-
+  border: 15px solid $color-dark-blue;
   &.hidden {
     visibility: hidden;
   }

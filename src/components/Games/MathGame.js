@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./MathGameStyle.scss";
+import faciee from "./../images/logo-aciee.png";
+import redeclipse from "./../images/Red Eclipse -white-horizontal.png";
+
 const TIME = 30; // Initial game duration, in seconds
 
 class Expression extends React.PureComponent {
@@ -417,57 +420,62 @@ class Game extends React.PureComponent {
       this.state;
 
     return (
-      <div className="game-container">
-        {!started ? (
-          <div className="mathContainer">
-            <div className="mathTitle">Start Joc</div>
-            <div className="mathDescription">
-              Alege raspunsul corect pentru urmatoarele expresii, fiecare
-              raspuns corect este punctat iar cele gresite sunt depunctate. La
-              fiecare 5 raspunsuri corecte primesti timp bonus !
-            </div>
-            <div
-              className="mathButton"
-              onClick={() => this.setState({ started: true })}
-            >
-              Start Joc
-            </div>
-          </div>
-        ) : (
-          <>
-            <Header
-              status={status}
-              endTime={endTime}
-              onTimerEnd={this.handleOnTimerEnd}
-            />
-            <div className="body">
-              <Expression
-                from={`${prev.a} + ${prev.b} = `}
-                to={`${next.a} + ${next.b} = `}
-                transitioning={selected !== -1}
-              />
-            </div>
-            <div className="footer">
-              <div className="container">
-                <MultipleChoice
-                  values={prev.choices}
-                  selected={selected}
-                  onClick={this.handleOnClick}
-                  correct={selected === prev.a + prev.b}
-                />
+      <div  className="game-page">
+        <div className="game-container">
+          {!started ? (
+            <div className="mathContainer">
+              <div className="mathTitle">Start Joc</div>
+              <div className="mathDescription">
+                Alege raspunsul corect pentru urmatoarele expresii, fiecare
+                raspuns corect este punctat iar cele gresite sunt depunctate. La
+                fiecare 5 raspunsuri corecte primesti timp bonus !
+              </div>
+              <div
+                className="mathButton"
+                onClick={() => this.setState({ started: true })}
+              >
+                Start Joc
               </div>
             </div>
-            <Summary
-              show={showSummary}
-              score={status.score}
-              onPlayAgain={this.handleOnPlayAgain}
-            />
-          </>
-        )}
+          ) : (
+            <>
+              <Header
+                status={status}
+                endTime={endTime}
+                onTimerEnd={this.handleOnTimerEnd}
+              />
+              <div className="body">
+                <Expression
+                  from={`${prev.a} + ${prev.b} = `}
+                  to={`${next.a} + ${next.b} = `}
+                  transitioning={selected !== -1}
+                />
+              </div>
+              <div className="footer">
+                <div className="container">
+                  <MultipleChoice
+                    values={prev.choices}
+                    selected={selected}
+                    onClick={this.handleOnClick}
+                    correct={selected === prev.a + prev.b}
+                  />
+                </div>
+              </div>
+              <Summary
+                show={showSummary}
+                score={status.score}
+                onPlayAgain={this.handleOnPlayAgain}
+              />
+            </>
+          )}
+        </div>
+        <div className="footer-section">
+          <img src={faciee} alt="Logo-FACIEE" onClick={()=>window.open('https://aciee.ugal.ro/')}/><p onClick={()=>window.open('https://aciee.ugal.ro/')}>Facultatea de Automatică, Calculatoare, Inginerie Electrică și Electronică</p>
+          <img src={redeclipse} alt="Logo-redeclipse" onClick={()=>window.open('https://redeclipse.ro/')} />
+        </div>
       </div>
     );
   }
 }
 
-// ReactDOM.render(<Game />, document.body);
 export default Game;
