@@ -4,6 +4,7 @@ interface GameCardProps {
   isSinglePlayer: boolean;
   image: string;
   index: number;
+  redirect: string;
 }
 const StyledGameCard = styled.div<{ image: string; index: number }>`
   height: 300px;
@@ -11,7 +12,7 @@ const StyledGameCard = styled.div<{ image: string; index: number }>`
   border-radius: 25px;
   background-image: url(${(props) => props.image});
   overflow: hidden;
-  border:1px solid grey;
+  border: 1px solid grey;
   background-repeat: no-repeat;
   background-size: 300px 300px;
   opacity: 0;
@@ -32,7 +33,7 @@ const StyledGameCard = styled.div<{ image: string; index: number }>`
     box-shadow: 4px 1px 15px -1px rgba(0, 0, 0, 0.4);
   }
   :nth-child(n) {
-    ${(props) => `animation-delay:${(props.index - 1) / 5 }s`}
+    ${(props) => `animation-delay:${(props.index - 1) / 5}s`}
   }
 
   transition: box-shadow 1s ease-in-out;
@@ -48,14 +49,20 @@ const StyledContent = styled.div`
   justify-content: center;
   p {
     margin: 3px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
   }
 `;
 export const GameCard = (props: GameCardProps) => {
   return (
-    <StyledGameCard image={props.image} index={props.index}>
+    <StyledGameCard
+      image={props.image}
+      index={props.index}
+      onClick={() => window.location.replace(props.redirect)}
+    >
       <StyledContent>
         <p>Title: {props.title}</p>
-        <p>{props.isSinglePlayer ? "SinglePlayer" : "MultiPlayer"}</p>
       </StyledContent>
     </StyledGameCard>
   );

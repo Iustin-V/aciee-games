@@ -7,10 +7,10 @@ const SContainer = styled.div`
   position: relative;
   justify-content: center;
   width: 100%;
-  max-height: 400px;
+  max-height: 600px;
   img {
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
   }
 `;
 

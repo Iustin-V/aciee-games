@@ -157,7 +157,7 @@ class PlayGround extends React.Component {
       <div className="memoryGameContainer">
         <div className="memoryScore">Scor: {this.state.score}</div>
         <div id="show" className="startButton" onClick={() => this.showCards()}>
-          Arata pozele
+          Arata cardurile
         </div>
         <div className="playground">
           <div className="cardContainer">

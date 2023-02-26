@@ -13,13 +13,37 @@ $choice-width: 80px;
 $choice-height: 50px;
 $choice-spacing: 15px;
 
-
-
 .game-container {
   justify-content: center;
   font-family: Roboto;
   background-color: $color-light-green;
   color: $color-dark-blue;
+}
+.mathContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+.mathTitle {
+  width: fit-content;
+  font-size: 35px;
+}
+.mathDescription {
+  width: 600px;
+  font-size: 25px;
+}
+.mathButton {
+  font-size: 30px;
+  background-color: #1abc9c;
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: white;
+  &:hover{
+    background-color: #5bb6a4;
+  }
 }
 
 div {

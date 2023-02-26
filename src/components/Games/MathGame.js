@@ -286,6 +286,7 @@ class Game extends React.PureComponent {
 
     this.state = {
       status,
+      started: false,
       selected: -1,
       showSummary: false,
       endTime: Date.now() + TIME * 1000,
@@ -401,7 +402,6 @@ class Game extends React.PureComponent {
   };
 
   handleOnPlayAgain = () => {
-
     const status = this.getInitialStatus();
     this.setState({
       status,
@@ -413,37 +413,57 @@ class Game extends React.PureComponent {
   };
 
   render() {
-    const { prev, next, status, selected, showSummary, endTime } = this.state;
+    const { prev, next, status, selected, showSummary, endTime, started } =
+      this.state;
 
     return (
       <div className="game-container">
-        <Header
-          status={status}
-          endTime={endTime}
-          onTimerEnd={this.handleOnTimerEnd}
-        />
-        <div className="body">
-          <Expression
-            from={`${prev.a} + ${prev.b} = `}
-            to={`${next.a} + ${next.b} = `}
-            transitioning={selected !== -1}
-          />
-        </div>
-        <div className="footer">
-          <div className="container">
-            <MultipleChoice
-              values={prev.choices}
-              selected={selected}
-              onClick={this.handleOnClick}
-              correct={selected === prev.a + prev.b}
-            />
+        {!started ? (
+          <div className="mathContainer">
+            <div className="mathTitle">Start Joc</div>
+            <div className="mathDescription">
+              Alege raspunsul corect pentru urmatoarele expresii, fiecare
+              raspuns corect este punctat iar cele gresite sunt depunctate. La
+              fiecare 5 raspunsuri corecte primesti timp bonus !
+            </div>
+            <div
+              className="mathButton"
+              onClick={() => this.setState({ started: true })}
+            >
+              Start Joc
+            </div>
           </div>
-        </div>
-        <Summary
-          show={showSummary}
-          score={status.score}
-          onPlayAgain={this.handleOnPlayAgain}
-        />
+        ) : (
+          <>
+            <Header
+              status={status}
+              endTime={endTime}
+              onTimerEnd={this.handleOnTimerEnd}
+            />
+            <div className="body">
+              <Expression
+                from={`${prev.a} + ${prev.b} = `}
+                to={`${next.a} + ${next.b} = `}
+                transitioning={selected !== -1}
+              />
+            </div>
+            <div className="footer">
+              <div className="container">
+                <MultipleChoice
+                  values={prev.choices}
+                  selected={selected}
+                  onClick={this.handleOnClick}
+                  correct={selected === prev.a + prev.b}
+                />
+              </div>
+            </div>
+            <Summary
+              show={showSummary}
+              score={status.score}
+              onPlayAgain={this.handleOnPlayAgain}
+            />
+          </>
+        )}
       </div>
     );
   }

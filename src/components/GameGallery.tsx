@@ -10,30 +10,33 @@ const StyledGallery = styled.div`
   gap: 35px;
   padding: 60px;
 `;
-const gameArr = [
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-  { title: "Snake", isSinglePlayer: true, image: SnakePic },
-];
-const games = gameArr.map((game,index) => {
-  return (
-    <GameCard
-      title={game.title}
-      isSinglePlayer={game.isSinglePlayer}
-      image={game.image}
-      index={index}
-    />
-  );
-});
-export const GameGallery = () => {
-  return <StyledGallery>{games} </StyledGallery>;
+
+const Games = (
+  gameArray: {
+    title: string;
+    description: string;
+    image: string;
+    redirect: string;
+  }[]
+) =>
+  gameArray.map((game, index) => {
+    return (
+      <GameCard
+        title={game.title}
+        isSinglePlayer={false}
+        image={game.image}
+        redirect={game.redirect}
+        index={index}
+      />
+    );
+  });
+export const GameGallery = (props: {
+  gameArray: {
+    title: string;
+    description: string;
+    image: string;
+    redirect: string;
+  }[];
+}) => {
+  return <StyledGallery>{Games(props.gameArray)} </StyledGallery>;
 };
