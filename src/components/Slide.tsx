@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const SContainer = styled.div`
   align-items: center;
@@ -28,15 +29,18 @@ interface SlideProps {
   image: string;
   redirect: string;
 }
-const Slide = (props: SlideProps) => (
-  <SContainer onClick={() => window.location.replace(props.redirect)}>
-    <STextWrapper>
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
-    </STextWrapper>
-    <img src={props.image} draggable="false" />
-    {/*<img src="https://via.placeholder.com/400/3D1D73/ffffff" />*/}
-  </SContainer>
-);
+const Slide = (props: SlideProps) => {
+  const navigate = useNavigate();
+
+  return (
+    <SContainer onClick={() => navigate(props.redirect)}>
+      <STextWrapper>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
+      </STextWrapper>
+      <img src={props.image} draggable="false" />
+    </SContainer>
+  );
+};
 
 export default Slide;

@@ -12,17 +12,12 @@ function App() {
   return (
     <StyledWrapper>
       <BrowserRouter>
-        {/*<div ref={topRef} />*/}
-
-        {/*<ScrollToTop />*/}
         <Routes>
           <Route path={`/`} element={<Home />} />
           <Route path={`/math`} element={<MathGame />} />
           <Route path={`/memory`} element={<MemoryGame id="memoryGame" />} />
           <Route path={`/letters`} element={<TypingGame />} />
           <Route path={`/clean`} element={<CleanThePlanet />} />
-          {/*{navbarLinks}*/}
-
           <Route path="*" element={<UnknownRoute />} />
         </Routes>
         {/*<ToTopButton topRef={topRef} isTopButton={isTopButton} />*/}
