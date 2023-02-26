@@ -54,7 +54,7 @@ const StyledSwitch = styled.label`
 
 const StyledText = styled.p<{ color: string }>`
   color: ${(props) => props.color};
-  font-family: Codec, serif;
+  font-family: "Russo", serif;
   font-size: 50px;
   margin: 0;
   transition: color 0.5s;

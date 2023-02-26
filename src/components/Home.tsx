@@ -9,7 +9,7 @@ export const Home = () => {
   const [isGallery, setIsGallery] = React.useState(false);
     const gameArray = [
         {
-            title: "Joc Matematica",
+            title: "Matematica Rapida",
             description:
                 "Testeaza-ti aptitudinile de matematician in acest joc distractiv care te determina sa te misti cat poti de repede.",
             image:
