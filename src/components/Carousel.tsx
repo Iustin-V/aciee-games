@@ -9,6 +9,7 @@ const StyledCarousel = styled.div`
   text-align: center;
   max-width: 1000px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 100px 0 0 0;
   opacity: 0;

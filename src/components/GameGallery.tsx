@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { GameCard } from "./GameCard";
-import SnakePic from "././Images/snake.jpg";
 const StyledGallery = styled.div`
   height: fit-content;
   display: flex;

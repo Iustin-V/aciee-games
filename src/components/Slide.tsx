@@ -41,14 +41,17 @@ const StyledStartGameButton=styled.button`
   ::before {
     content: '';
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #858cad;
     opacity: 0;
     -webkit-transition: .2s opacity ease-in-out;
     transition: .2s opacity ease-in-out;
+  }
+  :hover{
+    cursor:pointer;
   }
 
   :hover::before {
@@ -60,8 +63,8 @@ const StyledStartGameButton=styled.button`
   }
 
   span:nth-child(1) {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 4px;
     background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#2659d9));
@@ -71,8 +74,8 @@ const StyledStartGameButton=styled.button`
   }
 
   span:nth-child(2) {
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     height: 100%;
     width: 4px;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#2659d9));
@@ -82,8 +85,8 @@ const StyledStartGameButton=styled.button`
   }
 
   span:nth-child(3) {
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 4px;
     background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#2659d9));
@@ -93,8 +96,8 @@ const StyledStartGameButton=styled.button`
   }
 
   span:nth-child(4) {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 4px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#2659d9));
@@ -155,7 +158,7 @@ const Slide = (props: SlideProps) => {
             <span></span>
             <span></span>
             START JOC</StyledStartGameButton>
-      <img src={props.image} draggable="false" />
+      <img src={props.image} draggable="false" alt={props.title} />
     </SContainer>
   );
 };

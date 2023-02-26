@@ -14,7 +14,6 @@ const StyledGameCard = styled.div<{ image: string; index: number }>`
   border-radius: 25px;
   background-image: url(${(props) => props.image});
   overflow: hidden;
-  border: 1px solid grey;
   background-repeat: no-repeat;
   background-size: 300px 300px;
   opacity: 0;
@@ -73,6 +72,7 @@ export const StyledGameDescription=styled.p`
   width: 100%;
   height: fit-content;
   position: absolute;
+  color:white;
   top: 0;
   left: 0;
   margin: 0;

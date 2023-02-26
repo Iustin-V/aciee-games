@@ -4,12 +4,13 @@ export const StyledWrapper = styled.div`
   font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   background:transparent;
 `;
-export const PageContainer = styled.div`
-  height: fit-content;
+export const PageContainer = styled.div<{isGallery:boolean}>`
   background-color: transparent;
   position:relative;
+  overflow: hidden;
+  height: 100%;
   //min-height:calc(100vh - 161px);
-  
+
 `;
 
 export const MainTitle = styled.div`

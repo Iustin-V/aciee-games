@@ -44,7 +44,7 @@ export const Home = () => {
       <div className="bg bg2" />
       <div className="bg bg3" />
       <Navbar />
-      <PageContainer>
+      <PageContainer isGallery={isGallery}>
         <ToggleButton
           text="Gallery mode"
           toggled={isGallery}

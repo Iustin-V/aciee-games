@@ -1,5 +1,5 @@
-import faciee from "../images/logo-aciee.png";
-import redeclipse from "../images/Red Eclipse -white-horizontal.png";
+import faciee from "../Images/logo-aciee.png";
+import redeclipse from "../Images/Red Eclipse -white-horizontal.png";
 import "./Game-Style.scss";
 
 export const Footer = () => {
