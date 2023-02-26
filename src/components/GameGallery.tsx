@@ -3,10 +3,11 @@ import { GameCard } from "./GameCard";
 import SnakePic from "././Images/snake.jpg";
 const StyledGallery = styled.div`
   height: fit-content;
-  width: fit-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   gap: 35px;
   padding: 100px 60px 40px;
 `;
@@ -24,6 +25,7 @@ const Games = (
       <GameCard
         title={game.title}
         isSinglePlayer={false}
+        description={game.description}
         image={game.image}
         redirect={game.redirect}
         index={index}
