@@ -15,7 +15,16 @@ body,
   overflow: hidden;
 }
 
-
+.width-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20% 10px;
+}
 .unknownRoute {
   display: flex;
   justify-content: center;

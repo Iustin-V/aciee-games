@@ -43,19 +43,19 @@ export const Home = () => {
       <div className="bg" />
       <div className="bg bg2" />
       <div className="bg bg3" />
-      <Navbar />
-      <PageContainer isGallery={isGallery}>
-        <ToggleButton
-          text="Gallery mode"
-          toggled={isGallery}
-          setToggled={setIsGallery}
-        />
-        {isGallery ? (
-          <GameGallery gameArray={gameArray} />
-        ) : (
-          <Carousel gameArray={gameArray} />
-        )}
-      </PageContainer>
+       <Navbar />
+        <PageContainer isGallery={isGallery}>
+          <ToggleButton
+            text="Gallery mode"
+            toggled={isGallery}
+            setToggled={setIsGallery}
+          />
+          {isGallery ? (
+            <GameGallery gameArray={gameArray} />
+          ) : (
+            <Carousel gameArray={gameArray} />
+          )}
+        </PageContainer>
     </>
   );
 };

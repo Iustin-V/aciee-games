@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 .footer-section {
   display: flex;
@@ -34,5 +33,18 @@
   img {
     cursor: pointer;
     height: 70px;
+  }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    .faciee {
+      flex-direction: column;
+      text-align: center;
+      width: 100vw;
+      p {
+        font-size: 15px;
+      }
+    }
   }
 }
