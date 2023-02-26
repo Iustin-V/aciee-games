@@ -156,9 +156,9 @@ class PlayGround extends React.Component {
   render() {
     return (
       <div className="game-page">
-        <div className="bg"/>
-        <div className="bg bg2"/>
-        <div className="bg bg3"/>
+        <div className="bg" />
+        <div className="bg bg2" />
+        <div className="bg bg3" />
         <div className="memoryGameContainer">
           <div className="memoryScore">Scor: {this.state.score}</div>
           <div
@@ -173,6 +173,7 @@ class PlayGround extends React.Component {
               {this.state.finalizedMemoryCards.map((framework, index) => {
                 return (
                   <Card
+                    key={index}
                     framework={framework.name}
                     click={() => {
                       this.handleClick(framework.name, index);

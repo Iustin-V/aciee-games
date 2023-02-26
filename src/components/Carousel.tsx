@@ -52,6 +52,7 @@ export const Carousel = (props: {
         {props?.gameArray?.map((gameData, index) => {
           return (
             <Slide
+              key={gameData.title}
               title={gameData.title}
               description={gameData.description}
               image={gameData.image}

@@ -22,6 +22,7 @@ const Games = (
   gameArray.map((game, index) => {
     return (
       <GameCard
+        key={game.title}
         title={game.title}
         isSinglePlayer={false}
         description={game.description}

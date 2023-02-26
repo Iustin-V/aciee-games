@@ -182,8 +182,9 @@ class MultipleChoice extends React.PureComponent {
     const { values, selected, correct, onClick } = this.props;
     return (
       <div className="multiple-choice">
-        {values.map((res) => (
+        {values.map((res, index) => (
           <div
+            key={index}
             className={`choice animated ${
               selected === res
                 ? correct

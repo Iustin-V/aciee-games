@@ -19,7 +19,7 @@ function App() {
           <div className="bg bg3" />
           <div className="width-error">
             Ne pare rau, rezolutia dispozitivului dvs. este sub minimul necesar.
-            Accesati site-ul de pe un calculator.
+            Accesati site-ul de pe un PC.
           </div>
           <Footer />
         </>
