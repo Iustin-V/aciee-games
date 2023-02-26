@@ -1,7 +1,7 @@
 $bg: #353535;
 $color: #fffcf9;
 $blue: #116fb6;
-$wrong: #f3b61f;
+$wrong: #644203;
 * {
   box-sizing: border-box;
 }
@@ -41,14 +41,12 @@ a {
 
 .game {
   background: lighten($bg, 5%);
-  max-width: 900px;
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
-  max-height: 600px;
-
   position: relative;
   overflow: hidden;
+  margin-top: 50px;
+  width: 1000px;
+  height: 600px;
+  border: 15px solid #2c3e50;
 
   &__board {
     position: absolute;
@@ -101,7 +99,7 @@ a {
     color: $blue;
   }
   &[data-correct="false"] {
-    background: $wrong;
+    background: #e04e4e;
   }
 
   @media screen and (min-width: 768px) {

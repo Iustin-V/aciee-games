@@ -7,6 +7,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./TypingGame.scss";
+import { Footer } from "./Footer";
 
 class Component extends React.Component {
   constructor(props) {
@@ -248,15 +249,15 @@ class Component extends React.Component {
     }
 
     return (
-      <div className="game">
-        {/*<ReactCSSTransitionGroup*/}
-        {/*  transitionName="scale"*/}
-        {/*  transitionEnterTimeout={500}*/}
-        {/*  transitionLeaveTimeout={500}*/}
-        {/*>*/}
-        {board}
-        {/*</ReactCSSTransitionGroup>*/}
-        <input className="secret-input" type="text" />
+      <div className="game-page">
+        <div className="bg"/>
+        <div className="bg bg2"/>
+        <div className="bg bg3"/>
+        <div className="game">
+          {board}
+          <input className="secret-input" type="text" />
+        </div>
+        <Footer />
       </div>
     );
   }

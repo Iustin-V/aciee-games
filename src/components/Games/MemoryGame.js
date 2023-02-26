@@ -1,5 +1,6 @@
 import React from "react";
 import "./MemoryGame.scss";
+import { Footer } from "./Footer";
 
 class PlayGround extends React.Component {
   constructor(props) {
@@ -154,39 +155,50 @@ class PlayGround extends React.Component {
   }
   render() {
     return (
-      <div className="memoryGameContainer">
-        <div className="memoryScore">Scor: {this.state.score}</div>
-        <div id="show" className="startButton" onClick={() => this.showCards()}>
-          Arata cardurile
-        </div>
-        <div className="playground">
-          <div className="cardContainer">
-            {this.state.finalizedMemoryCards.map((framework, index) => {
-              return (
-                <Card
-                  framework={framework.name}
-                  click={() => {
-                    this.handleClick(framework.name, index);
-                  }}
-                  close={framework.close}
-                  complete={framework.complete}
-                />
-              );
-            })}
-          </div>
-        </div>
-        <div className="gameData">
+      <div className="game-page">
+        <div className="bg"/>
+        <div className="bg bg2"/>
+        <div className="bg bg3"/>
+        <div className="memoryGameContainer">
+          <div className="memoryScore">Scor: {this.state.score}</div>
           <div
-            className={`startButton ${
-              this.state.cardFlipped === this.state.finalizedMemoryCards.length
-                ? ""
-                : "hide"
-            }`}
-            onClick={() => this.handleRestart()}
+            id="show"
+            className="startButton"
+            onClick={() => this.showCards()}
           >
-            Joaca din nou
+            Arata cardurile
+          </div>
+          <div className="playground">
+            <div className="cardContainer">
+              {this.state.finalizedMemoryCards.map((framework, index) => {
+                return (
+                  <Card
+                    framework={framework.name}
+                    click={() => {
+                      this.handleClick(framework.name, index);
+                    }}
+                    close={framework.close}
+                    complete={framework.complete}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="gameData">
+            <div
+              className={`startButton ${
+                this.state.cardFlipped ===
+                this.state.finalizedMemoryCards.length
+                  ? ""
+                  : "hide"
+              }`}
+              onClick={() => this.handleRestart()}
+            >
+              Joaca din nou
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./MathGameStyle.scss";
-import faciee from "./../Images/logo-aciee.png";
-import redeclipse from "./../Images/Red Eclipse -white-horizontal.png";
+import {Footer} from "./Footer";
 
 const TIME = 30; // Initial game duration, in seconds
 
@@ -420,7 +419,10 @@ class Game extends React.PureComponent {
       this.state;
 
     return (
-      <div  className="game-page">
+      <div className="game-page">
+        <div className="bg"/>
+        <div className="bg bg2"/>
+        <div className="bg bg3"/>
         <div className="game-container">
           {!started ? (
             <div className="mathContainer">
@@ -469,10 +471,7 @@ class Game extends React.PureComponent {
             </>
           )}
         </div>
-        <div className="footer-section">
-          <img src={faciee} alt="Logo-FACIEE" onClick={()=>window.open('https://aciee.ugal.ro/')}/><p onClick={()=>window.open('https://aciee.ugal.ro/')}>Facultatea de Automatică, Calculatoare, Inginerie Electrică și Electronică</p>
-          <img src={redeclipse} alt="Logo-redeclipse" onClick={()=>window.open('https://redeclipse.ro/')} />
-        </div>
+        <Footer/>
       </div>
     );
   }

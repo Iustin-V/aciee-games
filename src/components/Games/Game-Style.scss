@@ -1,0 +1,38 @@
+.game-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+  width: 1000px;
+  align-items: center;
+  .faciee {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    gap: 15px;
+    :hover {
+      color: #e0e0e0;
+    }
+  }
+  p {
+    width: 300px;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+  }
+
+  img {
+    cursor: pointer;
+    height: 70px;
+  }
+}

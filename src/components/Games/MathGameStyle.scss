@@ -12,37 +12,8 @@ $color-torquoise: #2070bf;
 $choice-width: 80px;
 $choice-height: 50px;
 $choice-spacing: 15px;
-.game-page {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: rgb(141, 140, 157);
-  background: linear-gradient(
-    180deg,
-    rgba(141, 140, 157, 1) 0%,
-    rgba(110, 137, 164, 1) 100%
-  );
-}
-.footer-section {
-  display: flex;
-  justify-content: center;
-  height: 200px;
-  align-items: center;
-  gap: 30px;
-  cursor:pointer;
 
-  p {
-    font-weight: 700;
-    color: white;
-    font-size: 18px;
-  }
-  img {
-    height: 70px;
-  }
-}
+
 .game-container {
   justify-content: center;
   font-family: Roboto;
@@ -79,7 +50,7 @@ $choice-spacing: 15px;
   border-radius: 25px;
   color: white;
   &:hover {
-    background-color: #5bb6a4;
+    background-color: #0f4a85;
   }
 }
 

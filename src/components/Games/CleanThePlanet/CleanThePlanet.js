@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Game from "./components/Game";
 import DialogueCard from "./components/DialogueCard";
 import "./CleanThePlanet.css";
+import { Footer } from "../Footer";
 
 const CleanThePlanet = () => {
   const [score, setScore] = useState(0);
@@ -58,17 +59,25 @@ const CleanThePlanet = () => {
   }
 
   return (
-    <div className={"gamePage"}>
-      <h1 className="title">Sa &nbsp;curatam&nbsp;Planeta&nbsp;!</h1>
-      {getMainContent()}
-      <p
-        className="main-p"
-        style={
-          gameState === "game" ? { display: "block" } : { display: "none" }
-        }>
-        Scorul&nbsp;tau&nbsp;este&nbsp;:&nbsp;{score} | Timp ramas&nbsp;:&nbsp;
-        {time}
-      </p>
+    <div className="game-page">
+      <div className="bg" />
+      <div className="bg bg2" />
+      <div className="bg bg3" />
+      <div className={"gamePage"}>
+        <h1 className="title">Sa &nbsp;curatam&nbsp;Planeta&nbsp;!</h1>
+        {getMainContent()}
+        <p
+          className="main-p"
+          style={
+            gameState === "game" ? { display: "block" } : { display: "none" }
+          }
+        >
+          Scorul&nbsp;tau&nbsp;este&nbsp;:&nbsp;{score} | Timp
+          ramas&nbsp;:&nbsp;
+          {time}
+        </p>
+      </div>
+      <Footer />
     </div>
   );
 };
