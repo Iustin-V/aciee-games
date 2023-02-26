@@ -434,7 +434,12 @@ class Game extends React.PureComponent {
               </div>
               <div
                 className="mathButton"
-                onClick={() => this.setState({ started: true })}
+                onClick={() =>
+                  this.setState({
+                    started: true,
+                    endTime: Date.now() + TIME * 1000,
+                  })
+                }
               >
                 Start Joc
               </div>
