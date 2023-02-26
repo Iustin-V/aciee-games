@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./MathGameStyle.scss";
-import {Footer} from "./Footer";
+import { Footer } from "./Footer";
 
 const TIME = 30; // Initial game duration, in seconds
 
@@ -420,9 +420,9 @@ class Game extends React.PureComponent {
 
     return (
       <div className="game-page">
-        <div className="bg"/>
-        <div className="bg bg2"/>
-        <div className="bg bg3"/>
+        <div className="bg" />
+        <div className="bg bg2" />
+        <div className="bg bg3" />
         <div className="game-container">
           {!started ? (
             <div className="mathContainer">
@@ -471,7 +471,7 @@ class Game extends React.PureComponent {
             </>
           )}
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

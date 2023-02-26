@@ -16,7 +16,6 @@ $choice-spacing: 15px;
 
 .game-container {
   justify-content: center;
-  font-family: Roboto;
   background-color: $color-light-green;
   color: $color-dark-blue;
   display: flex;
@@ -26,6 +25,7 @@ $choice-spacing: 15px;
   width: 1000px;
   height: 600px;
   border: 15px solid $color-dark-blue;
+  font-family: "Russo", serif;
 }
 .mathContainer {
   display: flex;

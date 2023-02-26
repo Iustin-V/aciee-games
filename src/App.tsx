@@ -14,14 +14,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={`/`} element={<Home />} />
-          <Route path={`/math`} element={<MathGame />} />
-          <Route path={`/memory`} element={<MemoryGame id="memoryGame" />} />
-          <Route path={`/letters`} element={<TypingGame />} />
-          <Route path={`/clean`} element={<CleanThePlanet />} />
+          <Route path={`/joc-matematica`} element={<MathGame />} />
+          <Route path={`/joc-memorie`} element={<MemoryGame id="memoryGame" />} />
+          <Route path={`/joc-scris`} element={<TypingGame />} />
+          <Route path={`/joc-curatenie`} element={<CleanThePlanet />} />
           <Route path="*" element={<UnknownRoute />} />
         </Routes>
-        {/*<ToTopButton topRef={topRef} isTopButton={isTopButton} />*/}
-        {/*<Footer />*/}
       </BrowserRouter>
     </StyledWrapper>
   );
