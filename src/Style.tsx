@@ -8,6 +8,7 @@ export const StyledWrapper = styled.div`
 export const PageContainer = styled.div`
   height: fit-content;
   background-color: #ffffff;
+  position:relative;
   //min-height:calc(100vh - 161px);
   
 `;

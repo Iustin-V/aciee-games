@@ -10,7 +10,7 @@ const StyledCarousel = styled.div`
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 100px 0 0 0;
   opacity: 0;
   transform: translateY(30%);
   @keyframes slide-in-anim {

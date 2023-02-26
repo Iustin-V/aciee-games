@@ -13,7 +13,97 @@ const SContainer = styled.div`
     height: 600px;
     width: 600px;
   }
+
 `;
+
+const StyledStartGameButton=styled.button`
+  position: absolute;
+  opacity:0;
+  transform: translateX(-200%);
+  left: 50%;
+  bottom: 100px;
+  padding: 10px 15px;
+  border: none;
+  font-family: "Russo", sans-serif;
+  font-size: 30px;
+  background: linear-gradient(-30deg, #0b173d 50%, #080f2b 50%);
+  display: inline-block;
+  overflow: hidden;
+  color: #f7d4d4;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition:all ease-in .5s;
+
+  ::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #858cad;
+    opacity: 0;
+    -webkit-transition: .2s opacity ease-in-out;
+    transition: .2s opacity ease-in-out;
+  }
+
+  :hover::before {
+    opacity: 0.2;
+  }
+
+  span {
+    position: absolute;
+  }
+
+  span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#2659d9));
+    background: linear-gradient(to left, rgba(43, 8, 8, 0), #2659d9);
+    -webkit-animation: 2s animateTop linear infinite;
+    animation: 2s animateTop linear infinite;
+  }
+
+  span:nth-child(2) {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 4px;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#2659d9));
+    background: linear-gradient(to top, rgba(43, 8, 8, 0), #2659d9);
+    -webkit-animation: 2s animateRight linear -1s infinite;
+    animation: 2s animateRight linear -1s infinite;
+  }
+
+  span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#2659d9));
+    background: linear-gradient(to right, rgba(43, 8, 8, 0), #2659d9);
+    -webkit-animation: 2s animateBottom linear infinite;
+    animation: 2s animateBottom linear infinite;
+  }
+
+  span:nth-child(4) {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 4px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#2659d9));
+    background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #2659d9);
+    -webkit-animation: 2s animateLeft linear -1s infinite;
+    animation: 2s animateLeft linear -1s infinite;
+  }
+`
+
 
 const STextWrapper = styled.div`
   display: flex;
@@ -53,11 +143,17 @@ const Slide = (props: SlideProps) => {
   const navigate = useNavigate();
 
   return (
-    <SContainer onClick={() => navigate(props.redirect)}>
+    <SContainer>
       <STextWrapper>
         <h1>{props.title}</h1>
         <p>{props.description}</p>
       </STextWrapper>
+        <StyledStartGameButton onClick={() => navigate(props.redirect)}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            START JOC</StyledStartGameButton>
       <img src={props.image} draggable="false" />
     </SContainer>
   );
