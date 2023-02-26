@@ -141,6 +141,10 @@ body,
   color: #ffffff !important;
 }
 
+.faciee:hover > p{
+  color: #afafaf;
+}
+
 @keyframes top-to-bottom {
   0% {
     transform: translateY(-100%) rotate(45deg);
