@@ -7,7 +7,7 @@ import { Navbar } from "./Navbar";
 import imagineScris from './Images/tastare-rapida.webp'
 import imaginePlaneta from './Images/curatare-planeta.webp'
 import imagineMemorie from './Images/joc-memorie.webp'
-import imagineMatematica from './Images/joc-matematica.webp'
+import imagineMatematica from './Images/joc-mate.webp'
 export const Home = () => {
   const [isGallery, setIsGallery] = React.useState(false);
   const gameArray = [
