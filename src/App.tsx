@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./App.css";
 import { StyledWrapper } from "./Style";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -9,10 +9,30 @@ import { default as MemoryGame } from "./components/Games/MemoryGame";
 import { default as TypingGame } from "./components/Games/TypingGame";
 import CleanThePlanet from "./components/Games/CleanThePlanet/CleanThePlanet";
 import { Footer } from "./components/Games/Footer";
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: 0,
+    height: 0,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}
 function App() {
+  const size = useWindowSize();
   return (
     <StyledWrapper>
-      {window.innerWidth < 1100 ? (
+      {size.width < 1100 ? (
         <>
           <div className="bg" />
           <div className="bg bg2" />
