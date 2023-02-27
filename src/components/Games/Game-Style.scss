@@ -12,11 +12,29 @@
   height: 200px;
   width: 1000px;
   align-items: center;
+
   .faciee {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    0% {
+      margin-left: 100%;
+    }
+
+    70% {
+      margin-left: -15%;
+    }
+
+    100% {
+      margin-left: 0;
+    }
+
   }
   p {
     width: 300px;
