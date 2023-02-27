@@ -6,6 +6,7 @@ import { GameGallery } from "./GameGallery";
 import { Navbar } from "./Navbar";
 import imagineScris from './Images/tastare-rapida.webp'
 import imaginePlaneta from './Images/curatare-planeta.webp'
+import imagineMemorie from './Images/joc-memorie.webp'
 export const Home = () => {
   const [isGallery, setIsGallery] = React.useState(false);
   const gameArray = [
@@ -21,7 +22,7 @@ export const Home = () => {
       title: "Joc Memorie",
       description:
         "Acest joc iti va stimula abilitatea de a retine informatii pe termen scurt. Vezi cat de rapid esti sub presiune",
-      image: "https://via.placeholder.com/400/3D1D73/ffffff",
+      image: imagineMemorie,
       redirect: "/joc-memorie",
     },
     {
