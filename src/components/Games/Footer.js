@@ -16,6 +16,7 @@ export const Footer = () => {
         </p>
       </div>
       <img
+        className="redeclipse"
         src={redeclipse}
         alt="Logo-redeclipse"
         onClick={() => window.open("https://redeclipse.ro/")}
