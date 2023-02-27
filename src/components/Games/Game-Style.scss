@@ -34,7 +34,6 @@
     100% {
       margin-left: 0;
     }
-
   }
   p {
     width: 300px;
@@ -48,7 +47,7 @@
     cursor: pointer;
     height: 70px;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     height: fit-content;
     width: fit-content;
@@ -56,6 +55,7 @@
       flex-direction: column;
       text-align: center;
       width: 100vw;
+      animation: none;
       p {
         font-size: 15px;
       }
