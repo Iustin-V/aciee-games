@@ -7,6 +7,7 @@ import { Navbar } from "./Navbar";
 import imagineScris from './Images/tastare-rapida.webp'
 import imaginePlaneta from './Images/curatare-planeta.webp'
 import imagineMemorie from './Images/joc-memorie.webp'
+import imagineMatematica from './Images/joc-matematica.webp'
 export const Home = () => {
   const [isGallery, setIsGallery] = React.useState(false);
   const gameArray = [
@@ -14,8 +15,7 @@ export const Home = () => {
       title: "Joc Matematica",
       description:
         "Testeaza-ti aptitudinile de matematician in acest joc distractiv care te determina sa te misti cat poti de repede.",
-      image:
-        "https://img.freepik.com/premium-vector/cartoon-math-chalkboard-background_23-2148154590.jpg?w=2000",
+      image: imagineMatematica,
       redirect: "/joc-matematica",
     },
     {

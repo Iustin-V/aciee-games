@@ -24,6 +24,10 @@ export const MainTitle = styled.div`
   //background-color: #2070bf;
   font-weight: 700;
   font-family: 'Codec',serif;
+  
+  h1{
+    margin: 40px 0 0;
+  }
 
 `;
 export const MainPageText = styled.div`
