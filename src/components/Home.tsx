@@ -4,7 +4,8 @@ import { ToggleButton } from "./ToggleButton";
 import React from "react";
 import { GameGallery } from "./GameGallery";
 import { Navbar } from "./Navbar";
-
+import imagineScris from './Images/tastare-rapida.webp'
+import imaginePlaneta from './Images/curatare-planeta.webp'
 export const Home = () => {
   const [isGallery, setIsGallery] = React.useState(false);
   const gameArray = [
@@ -27,13 +28,13 @@ export const Home = () => {
       title: "Joc Scris",
       description:
         "Afla cate cuvinte poti scrie intr-un timp foarte scurt. Joaca si compara rezultatele cu prietenii tai. ",
-      image: "https://via.placeholder.com/400/3D1D73/ffffff",
+      image: imagineScris,
       redirect: "/joc-scris",
     },
     {
       title: "Joc Curatenie",
       description: "Contribuie la curatarea planetei in acest joc distractiv.",
-      image: "https://via.placeholder.com/400/3D1D73/ffffff",
+      image: imaginePlaneta,
       redirect: "/joc-curatenie",
     },
   ];
