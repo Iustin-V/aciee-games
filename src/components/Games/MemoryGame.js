@@ -1,6 +1,7 @@
 import React from "react";
 import "./MemoryGame.scss";
 import { Footer } from "./Footer";
+import { BackButton } from "./BackButton";
 
 class PlayGround extends React.Component {
   constructor(props) {
@@ -156,6 +157,7 @@ class PlayGround extends React.Component {
   render() {
     return (
       <div className="game-page">
+        <BackButton />
         <div className="bg" />
         <div className="bg bg2" />
         <div className="bg bg3" />

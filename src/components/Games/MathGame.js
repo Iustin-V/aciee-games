@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./MathGameStyle.scss";
 import { Footer } from "./Footer";
+import { BackButton } from "./BackButton";
 
 const TIME = 30; // Initial game duration, in seconds
 
@@ -421,6 +422,7 @@ class Game extends React.PureComponent {
 
     return (
       <div className="game-page">
+        <BackButton />
         <div className="bg" />
         <div className="bg bg2" />
         <div className="bg bg3" />

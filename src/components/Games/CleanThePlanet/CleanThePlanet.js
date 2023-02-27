@@ -3,6 +3,7 @@ import Game from "./components/Game";
 import DialogueCard from "./components/DialogueCard";
 import "./CleanThePlanet.css";
 import { Footer } from "../Footer";
+import { BackButton } from "../BackButton";
 
 const CleanThePlanet = () => {
   const [score, setScore] = useState(0);
@@ -60,6 +61,7 @@ const CleanThePlanet = () => {
 
   return (
     <div className="game-page">
+      <BackButton />
       <div className="bg" />
       <div className="bg bg2" />
       <div className="bg bg3" />
