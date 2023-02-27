@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "A.C.I.E.E. Games",
+  "name": "A.C.I.E.E. Games",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "logo-aciee.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo-aciee.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "logo-aciee.png",
       "type": "image/png",
       "sizes": "512x512"
     }

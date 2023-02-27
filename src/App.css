@@ -89,7 +89,9 @@ body,
 .App-link {
   color: #61dafb;
 }
-
+.jyavce {
+  height: 250px;
+}
 .slick-current.slick-active.slick-center {
   opacity: 1;
   transition: transform 1s;
